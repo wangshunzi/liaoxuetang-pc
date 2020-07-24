@@ -1,0 +1,32 @@
+@import "css/base";
+
+// 首页导航栏样式
+#nav_bar {
+  background-color: orange;
+  height: 140px;
+  .nav_content {
+    background-color: tomato;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    .top {
+      background-color: @theme_color;
+      flex: 1;
+    }
+    .bottom {
+      height: 40px;
+      background-color: cyan;
+      color: @theme_color;
+    }
+  }
+}
+
+
+// 首页焦点图样式
+#ad_focus {
+  height: 250px;
+  background-color: lightgray;
+  color: @theme_color;
+  font-size: 50px;
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+
+@import "../../css/base";
+
+#nav_bar {
+  background-color: orange;
+  height: 140px;
+  .nav_content {
+    background-color: tomato;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    .top {
+      background-color: @theme_color;
+      flex: 1;
+    }
+    .bottom {
+      height: 40px;
+      background-color: cyan;
+      color: @theme_color;
+    }
+  }
+}
