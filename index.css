@@ -1,0 +1,32 @@
+@import "normalize.css";
+.bx {
+  width: 1205px;
+  margin: 0 auto;
+}
+#nav_bar {
+  background-color: orange;
+  height: 140px;
+}
+#nav_bar .nav_content {
+  background-color: tomato;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+}
+#nav_bar .nav_content .top {
+  background-color: green;
+  flex: 1;
+}
+#nav_bar .nav_content .bottom {
+  height: 40px;
+  background-color: cyan;
+  color: green;
+}
+#ad_focus {
+  height: 250px;
+  background-color: lightgray;
+  color: green;
+  font-size: 50px;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */
