@@ -112,6 +112,7 @@
             }
           }
           .operation_pane {
+            z-index: 999;
             width: 160px;
             height: 140px;
             background-color: orange;
@@ -139,8 +140,66 @@
 
     .bottom {
       height: 40px;
-      background-color: cyan;
-      color: @theme_color;
+      //background-color: cyan;
+      display: flex;
+      justify-content: space-between;
+      .left {
+        //background-color: gray;
+        .menus {
+          list-style: none;
+          display: flex;
+          li {
+            //background-color: orange;
+            //border: 1px solid red;
+            a {
+              //background-color: darkcyan;
+              display: block;
+              height: 40px;
+              padding: 0 15px;
+              text-align: center;
+              line-height: 40px;
+              text-decoration: none;
+              color: #333;
+              font-size: 18px;
+              position: relative;
+              &.active,
+              &:hover {
+                color: @theme_color;
+                &::before {
+                  content: "";
+                  display: block;
+                  width: 50%;
+                  height: 5px;
+                  background-color: @theme_color;
+                  position: absolute;
+                  bottom: -5px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+              }
+            }
+          }
+        }
+      }
+      .right {
+        //background-color: yellowgreen;
+        .hd {
+          height: 100%;
+          //background-color: red;
+          list-style: none;
+          display: flex;
+          align-items: center;
+          li {
+            &::before {
+              margin-right: 6px;
+            }
+            &.fl {
+              margin-right: 15px;
+            }
+          }
+
+        }
+      }
     }
   }
 }
