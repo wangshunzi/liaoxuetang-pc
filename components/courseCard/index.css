@@ -1,0 +1,106 @@
+@import "normalize.css";
+@import "https://at.alicdn.com/t/font_1964732_d9jpsdruemh.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+.bx {
+  width: 1205px;
+  margin: 0 auto;
+}
+.course_card {
+  background-color: #fff;
+  width: 218px;
+  height: 252px;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s linear;
+}
+.course_card:hover {
+  box-shadow: 0 0 10px 3px grey;
+}
+.course_card .top {
+  width: 100%;
+  height: 130px;
+  background-color: green;
+  position: relative;
+}
+.course_card .top a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.course_card .top a img {
+  width: 100%;
+  height: 100%;
+  transition: all 2s linear;
+}
+.course_card .top a img:hover {
+  transform: scale(1.5, 1.5);
+}
+.course_card .top .tag {
+  width: 48px;
+  height: 23px;
+  background-image: url("../../assets/images/layout_css_sprites.png");
+  background-position: -16px -57px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 23px;
+}
+.course_card .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+.course_card .content .title {
+  flex: 3;
+}
+.course_card .content .title a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+.course_card .content .title a:hover {
+  color: #780000;
+}
+.course_card .content .score {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+.course_card .content .score .star {
+  width: 57px;
+  height: 10px;
+  background-image: url("../../assets/images/layout_css_sprites.png");
+  background-position: -91px -58px;
+  position: relative;
+}
+.course_card .content .score .star .y_star {
+  background-image: url("../../assets/images/layout_css_sprites.png");
+  background-position: -10px -158px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.course_card .content .score .score_v {
+  margin-left: 5px;
+  color: #777986;
+  font-size: 12px;
+}
+.course_card .content .good {
+  flex: 2;
+  font-size: 14px;
+}
+/*# sourceMappingURL=index.css.map */

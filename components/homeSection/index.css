@@ -1,0 +1,32 @@
+@import "normalize.css";
+@import "https://at.alicdn.com/t/font_1964732_d9jpsdruemh.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+.bx {
+  width: 1205px;
+  margin: 0 auto;
+}
+.section > .top {
+  height: 32px;
+  color: #780000;
+  font-size: 28px;
+  text-align: center;
+  position: relative;
+}
+.section > .top a {
+  color: #400000;
+  font-size: 16px;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.section > .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/*# sourceMappingURL=index.css.map */

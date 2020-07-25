@@ -1,5 +1,5 @@
 @import "normalize.css";
-@import "//at.alicdn.com/t/font_1964732_vkdzwoesqsa.css";
+@import "https://at.alicdn.com/t/font_1964732_d9jpsdruemh.css";
 * {
   margin: 0;
   padding: 0;
@@ -9,29 +9,376 @@
   margin: 0 auto;
 }
 #nav_bar {
-  background-color: orange;
   height: 140px;
 }
 #nav_bar .nav_content {
-  background-color: tomato;
   height: 140px;
   display: flex;
   flex-direction: column;
 }
 #nav_bar .nav_content .top {
-  background-color: green;
   flex: 1;
+  display: flex;
+}
+#nav_bar .nav_content .top .logo {
+  flex: 1;
+}
+#nav_bar .nav_content .top .logo img {
+  width: 193px;
+}
+#nav_bar .nav_content .top .search {
+  flex: 3;
+}
+#nav_bar .nav_content .top .search .search_bar {
+  width: 400px;
+  height: 40px;
+  margin: 0 auto;
+  border: 1px solid #999;
+  border-radius: 20px;
+  display: flex;
+}
+#nav_bar .nav_content .top .search .search_bar .key {
+  flex: 1;
+  font-size: 15px;
+  text-align: center;
+  line-height: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#nav_bar .nav_content .top .search .search_bar .key span::before {
+  font-size: 10px;
+}
+#nav_bar .nav_content .top .search .search_bar .input {
+  flex: 4;
+}
+#nav_bar .nav_content .top .search .search_bar .input input {
+  border: none;
+  width: 100%;
+  height: 98%;
+  font-size: 14px;
+  text-indent: 15px;
+}
+#nav_bar .nav_content .top .search .search_bar .input input:focus {
+  outline: none;
+}
+#nav_bar .nav_content .top .search .search_bar .btn {
+  flex: 1;
+  background-color: green;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 14px;
+}
+#nav_bar .nav_content .top .personal {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+#nav_bar .nav_content .top .personal .intro_pane {
+  height: 50px;
+  position: relative;
+}
+#nav_bar .nav_content .top .personal .intro_pane:hover .operation_pane {
+  display: block;
+}
+#nav_bar .nav_content .top .personal .intro_pane .intro {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+#nav_bar .nav_content .top .personal .intro_pane .intro img {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  margin-left: 10px;
+}
+#nav_bar .nav_content .top .personal .intro_pane .operation_pane {
+  z-index: 999;
+  width: 160px;
+  height: 140px;
+  background-color: orange;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: none;
+  border-radius: 5px;
+}
+#nav_bar .nav_content .top .personal .intro_pane .operation_pane::before {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border: 10px solid transparent;
+  border-bottom-color: orange;
+  position: absolute;
+  right: 8px;
+  top: -20px;
 }
 #nav_bar .nav_content .bottom {
   height: 40px;
-  background-color: cyan;
+  display: flex;
+  justify-content: space-between;
+}
+#nav_bar .nav_content .bottom .left .menus {
+  list-style: none;
+  display: flex;
+}
+#nav_bar .nav_content .bottom .left .menus li a {
+  display: block;
+  height: 40px;
+  padding: 0 15px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  position: relative;
+}
+#nav_bar .nav_content .bottom .left .menus li a.active,
+#nav_bar .nav_content .bottom .left .menus li a:hover {
   color: green;
 }
+#nav_bar .nav_content .bottom .left .menus li a.active::before,
+#nav_bar .nav_content .bottom .left .menus li a:hover::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 5px;
+  background-color: green;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#nav_bar .nav_content .bottom .right .hd {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+#nav_bar .nav_content .bottom .right .hd li::before {
+  margin-right: 6px;
+}
+#nav_bar .nav_content .bottom .right .hd li.fl {
+  margin-right: 15px;
+}
 #ad_focus {
-  height: 250px;
+  height: 420px;
   background-color: lightgray;
+  position: relative;
+}
+#ad_focus .container {
+  height: 420px;
+  width: 100%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#ad_focus .container ul {
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  position: relative;
+}
+#ad_focus .container ul li {
+  width: 100%;
+  height: 100%;
+  background-color: greenyellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#ad_focus .container ul li.active {
+  display: block;
+}
+#ad_focus .container ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#ad_focus .container ul li a img {
+  width: 100%;
+  height: 100%;
+}
+#ad_focus .titles {
+  width: 280px;
+  height: 380px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+#ad_focus .titles ul {
+  width: 100%;
+  height: 100%;
+  padding: 20px 15px;
+  list-style: none;
+  box-sizing: border-box;
+}
+#ad_focus .titles ul li {
+  height: 40px;
+  line-height: 40px;
+}
+#ad_focus .titles ul li.active a {
   color: green;
-  font-size: 50px;
+}
+#ad_focus .titles ul li.active a::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-right-color: green;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+}
+#ad_focus .titles ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+}
+#ad_focus .titles ul li a:hover {
+  color: green;
+}
+#ad_focus .titles ul li a:hover::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-right-color: green;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+}
+.section {
+  padding: 10px 0;
+}
+.section > .top {
+  height: 32px;
+  color: #780000;
+  font-size: 28px;
   text-align: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+.section > .top a {
+  color: #400000;
+  font-size: 16px;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.section > .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.course_card {
+  background-color: #fff;
+  width: 218px;
+  height: 252px;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s linear;
+}
+.course_card:hover {
+  box-shadow: 0 0 10px 3px grey;
+}
+.course_card .top {
+  width: 100%;
+  height: 130px;
+  background-color: green;
+  position: relative;
+}
+.course_card .top a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.course_card .top a img {
+  width: 100%;
+  height: 100%;
+  transition: all 2s linear;
+}
+.course_card .top a img:hover {
+  transform: scale(1.5, 1.5);
+}
+.course_card .top .tag {
+  width: 48px;
+  height: 23px;
+  background-image: url("./assets/images/layout_css_sprites.png");
+  background-position: -16px -57px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 23px;
+}
+.course_card .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+.course_card .content .title {
+  flex: 3;
+}
+.course_card .content .title a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+.course_card .content .title a:hover {
+  color: #780000;
+}
+.course_card .content .score {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+.course_card .content .score .star {
+  width: 57px;
+  height: 10px;
+  background-image: url("./assets/images/layout_css_sprites.png");
+  background-position: -91px -58px;
+  position: relative;
+}
+.course_card .content .score .star .y_star {
+  background-image: url("./assets/images/layout_css_sprites.png");
+  background-position: -10px -158px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.course_card .content .score .score_v {
+  margin-left: 5px;
+  color: #777986;
+  font-size: 12px;
+}
+.course_card .content .good {
+  flex: 2;
+  font-size: 14px;
 }
 /*# sourceMappingURL=index.css.map */
